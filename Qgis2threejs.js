@@ -89,7 +89,7 @@ Q3D.Config = {
 
   qmarker: {
     r: 0.004,
-    c: 0xffff00,
+    c: 0x2196f3,
     o: 0.8
   },
 

@@ -1,5 +1,5 @@
 body {
-  font-family: arial, sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   margin: 0;
   overflow: hidden;
 }
@@ -65,18 +65,72 @@ body {
 
 #header {
   position: absolute;
-  left: 5px;
-  top: 5px;
+  left: 20px;
+  top: 15px;
+  height: 1.2em;
+  width: 730px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: rgb(73, 105, 119);
+  background-color: rgba(255, 255, 255, 0.726);
+  font-size: 50px;
 }
+
+#overview{
+  position: absolute;
+  top: 80px;
+  left: 20px;
+}
+
+
+#toggle_overview{
+  font-size: x-large;
+  padding-left: 18px;
+  cursor: pointer;
+}
+
+#toggle_overview:hover{
+  font-weight: bolder;
+}
+
+#overview_map{
+  display: none;
+}
+
+#overview_map.open{
+  display: block;
+}
+
 
 #footer {
   position: absolute;
-  left: 5px;
-  bottom: 5px;
+  left: 20px;
+  bottom: 15px;
+  height: 70px;
+  width: 500px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+
+
+
+  font-size: small;
+  color: rgb(73, 105, 119);
+  background-color: rgba(255, 255, 255, 0.726);
 }
 
 #infobtn {
   cursor: pointer;
+  position: absolute;
+  bottom: 82px;
+  left: 20px;
+
 }
 
 #infobtn img {
@@ -87,30 +141,29 @@ body {
 /* popup */
 #popup {
   position: absolute;
-  left: 2px;
-  top: 2px;
-  max-width: 480px;
+  right: 20px;
+  bottom: 20px;
+  max-width: 500px;
   min-width: 300px;
   z-index: 9999;
-  border: solid gray;
-  border-width: 1px 2px 2px;
+  /* border: solid rgb(0, 0, 0); */
+  /* border-width: 1px 2px 2px; */
   border-radius: 3px;
-  display: none;
+  display:none ;
 }
 
 #popupbar {
-  background: dimgray;
-  color: white;
-  padding-left: 4px;
-  height: 18px;
+  background: rgb(84, 121, 138);
+  padding-left: 5px;
+  height: 20px;
   border-radius: 3px 3px 0 0;
 }
 
 #closebtn {
   color: rgb(220, 220, 220);
-  background: gray;
-  border: 1px solid darkgray;
-  border-radius: 4px;
+  /* background: gray; */
+  /* border: 1px solid darkgray; */
+  /* border-radius: 4px; */
   line-height: 16px;
   font-size: 16px;
   font-weight: bold;
@@ -121,8 +174,15 @@ body {
   cursor: pointer;
 }
 
+#closebtn:hover {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  font-weight:bolder;
+}
+
 #popupbody {
-  background-color: white;
+  background: rgba(138, 199, 228, 0.795);
   padding: 2px 5px 2px;
   border-radius: 0 0 3px 3px;
   max-height: 500px;
@@ -137,12 +197,12 @@ body {
 }
 
 #popupbody table caption {
-  background-color: gray;
+  background: rgb(84, 121, 138);
   color: white;
-  font-size: small;
+  font-size:medium;
   padding: 1px;
-  padding-left: 6px;
-  text-align: left;
+  text-align: center;
+  border-radius: 3px;
 }
 
 #popupbody table td {
@@ -165,15 +225,22 @@ body {
   width: 40%;
 }
 
+#action-btn-flex{
+  display: flex;
+  justify-content: center;
+  align-content:space-between;
+  flex-direction: row;
+  padding-bottom: 3px;
+}
+
 .action-btn {
-  display: inline-block;
-  border: 1px solid gray;
-  border-radius: 2px;
+  /* border: 1px solid rgb(84, 121, 138); */
+  border-radius: 3px;
   background-color: #FBFBFB;
   cursor: pointer;
   font-size: small;
-  padding: 1px;
-  margin-left: 2px;
+  padding: 2px;
+  margin: 2px;
 }
 
 .action-zoom {
@@ -189,7 +256,7 @@ body {
 }
 
 #pageinfo h1 {
-  background-color: gray;
+  background-color: rgb(84, 121, 138);
   color: white;
   font-size: small;
   font-weight: normal;
@@ -201,6 +268,7 @@ body {
 
 #urlbox {
   width: 100%;
+  background-color:rgba(255, 255, 255, 0.733);
 }
 
 #usage, #about {
@@ -208,7 +276,7 @@ body {
 }
 
 #usage tr:nth-child(odd) {
-  background-color: #eeeeee;
+  background-color: rgba(255, 255, 255, 0.733);
 }
 
 #usage td.star {
@@ -278,8 +346,8 @@ body {
 
 #northarrow {
   position: absolute;
-  left: 12px;
-  bottom: 16px;
+  right: 30px;
+  top: 25px;
   width: 80px;
   height: 80px;
   z-index: 1000;
